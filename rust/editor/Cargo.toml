@@ -1,0 +1,17 @@
+[package]
+name = "cortdex_editor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow.workspace = true
+
+serde.workspace = true
+serde_json.workspace = true
+
+thiserror.workspace = true
+
+cortdex_types.workspace = true
+
+markdown = "=1.0.0-alpha.23"
+mdast_util_to_markdown = "=0.0.1"

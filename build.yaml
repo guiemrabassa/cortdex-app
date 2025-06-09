@@ -1,0 +1,31 @@
+# https://wilsonwilson.dev/articles/flutter-build-yaml
+targets:
+  $default:
+    sources:
+      - lib/src/rust/**
+      - $package$
+      - lib/$lib$
+      - lib/**
+
+    builders:
+      freezed:
+        generate_for:
+          - lib/src/rust/**
+      json_serializable:
+        options:
+          explicit_to_json: true
+          create_to_json: true
+        generate_for:
+          - lib/src/rust/**
+      riverpod_generator:
+        generate_for:
+          - lib/src/**
+      super_annotations:
+        generate_for:
+          - lib/src/**
+
+
+global_options:
+  super_annotations:
+    options:
+      targets: [ meta ]

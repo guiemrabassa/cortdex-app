@@ -1,0 +1,4 @@
+rust_input: crate::api, cortdex_ml::api, cortdex_db::api, cortdex_editor::api, cortdex_types::api
+rust_root: rust/
+dart_output: lib/src/rust
+stop_on_error: true

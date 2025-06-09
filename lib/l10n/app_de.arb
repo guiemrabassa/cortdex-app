@@ -1,0 +1,155 @@
+{
+  "helloWorld": "Hallo Welt!",
+  "@helloWorld": {
+    "description": "Der übliche Gruß des frischgebackenen Programmierers"
+  },
+  "welcomeMessage": "Willkommen bei der Cortdex-Anwendung!",
+  "chooseDatabaseType": "Datenbanktyp auswählen",
+  "local": "Lokal",
+  "local_": "Lokal {value}",
+  "remote": "Remote",
+  "remote_": "Remote {value}",
+  "connection": "Verbindung",
+  "chooseConnectionType": "Verbindungstyp auswählen",
+  "saveDbSettings": "Datenbankeinstellungen speichern",
+  "settings": "Einstellungen",
+  "settings_": "{value}-Einstellungen",
+  "loading": "Laden",
+  "failed": "Fehlgeschlagen",
+  "loadingFailed": "Laden fehlgeschlagen",
+  "client": "Client",
+  "server": "Server",
+  "choose": "Auswählen",
+  "address": "Adresse",
+  "address_": "{value}-Adresse",
+  "port": "Port",
+  "model": "Modell",
+  "path": "Pfad",
+  "path_": "{value}-Pfad",
+  "enter": "Eingeben",
+  "enter_": "{value} eingeben",
+  "database": "Datenbank",
+  "selectionHint": "Wähle den {value}",
+  "@selectionHint": {
+    "description": "Ein Hinweis für Auswahloptionen",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "connect": "Verbinden",
+  "connectTo": "Mit {value} verbinden",
+  "@connectTo": {
+    "description": "Mit einer bestimmten Ressource oder einem Dienst verbinden",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "disconnect": "Trennen",
+  "disconnectFrom": "Von {value} trennen",
+  "@disconnectFrom": {
+    "description": "Von einer bestimmten Ressource oder einem Dienst trennen",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "start": "Starten",
+  "startThe": "{value} starten",
+  "@startThe": {
+    "description": "Einen Prozess mit {value} starten",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "stop": "Stoppen",
+  "stop_": "{value} stoppen",
+  "create_": "{value} erstellen",
+  "@create_": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "inputHint": "Gib den {value} ein",
+  "@inputHint": {
+    "description": "Ein Hinweis für Eingabefelder",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "addNew": "Neu hinzufügen",
+  "@addNew": {
+    "description": ""
+  },
+  "add": "Hinzufügen",
+  "@add": {
+    "description": ""
+  },
+  "create": "Erstellen",
+  "@create": {
+    "description": ""
+  },
+  "delete": "Löschen",
+  "@delete": {
+    "description": ""
+  },
+  "edit": "Bearbeiten",
+  "@edit": {
+    "description": ""
+  },
+  "use": "Verwenden",
+  "@use": {
+    "description": ""
+  },
+  "error": "Fehler{value}",
+  "@error": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "notFound": "Kein {value} gefunden",
+  "@notFound": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "Der Wert, der in den Platzhalter eingefügt werden soll"
+      }
+    }
+  },
+  "share": "Teilen",
+  "@share": {
+    "description": ""
+  },
+  "menu": "Menü",
+  "@menu": {
+    "description": ""
+  },
+  "noteEditorHint": "Beginne, deine Notizen zu schreiben...",
+  "@noteEditorHint": {
+    "description": ""
+  },
+  "attribute": "Attribut",
+  "note": "Notiz"
+}

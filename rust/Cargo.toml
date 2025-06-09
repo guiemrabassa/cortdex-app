@@ -1,0 +1,243 @@
+cargo-features = ["profile-rustflags"]
+
+[profile.dev]
+rustflags = ["-C", "target-feature=+fp16,+fhm"]
+
+[profile.release]
+rustflags = ["-C", "target-feature=+fp16,+fhm"]
+
+# Compile the entire crate as one unit.
+# Slows compile times, marginal improvements.
+codegen-units = 1
+lto = "thin"
+
+# Optimize with size in mind (also try "z", sometimes it is better).
+opt-level = "s"
+strip = "debuginfo"
+
+
+
+[workspace]
+resolver = "3"
+members = [ 
+    "ml",
+    "db",
+    "types",
+    "editor",
+    "test",
+    "into_request/into_request_derive",
+    "into_request/into_request"
+]
+
+[workspace.dependencies]
+
+# ML
+candle-core = { version = "0.9.1" }
+candle-nn = { version = "0.9.1" }
+candle-transformers = "0.9.1"
+candle-examples = { version = "0.9.1", default-features = false }
+candle-hf-hub = { version = "0.3.3", default-features = false, features = ["rustls-tls", "tokio"]}
+
+
+tokenizers = { version = "0.21.1", default-features = false, features = ["rustls-tls"] }
+
+hf-hub = { version = "0.3.2", default-features = false, features = ["tokio"] }
+
+
+
+# Serialization
+serde = { version = "1.0.219", features = ["derive"]}
+serde_json = "1.0.140"
+ron = "0.8.1"
+bitcode = "0.6.6"
+serde_yaml = "0.9.34"
+typetag = "0.2.20"
+
+regex = "1.11.1"
+
+bytemuck = "1.23.0"
+strum = { version = "0.26.3", features = ["derive"] } # Enum macros
+derive-new = "0.7.0"
+
+# Error handling
+
+anyhow = "1.0.98"
+thiserror = "2.0.12"
+
+# Async, etc...
+
+tokio = "1.45.1"
+crossbeam = "0.8.4"
+futures = "0.3.31"
+async-trait = "0.1.88"
+
+quill-delta-rs = "1.1.1"
+
+uuid = "1.17.0"
+
+surrealdb = { version = "2.3.3", features = [
+    # "kv-rocksdb",
+    "kv-surrealkv",
+]}
+
+deadpool = "0.12.2"
+
+# git2 = "0.20.1"
+
+gix = { version = "0.71.0", default-features = false, features = ["blocking-http-transport-reqwest-rust-tls", "revparse-regex", "parallel"] }
+
+chrono = "0.4.41"
+
+android_logger = "0.14.1"
+
+log = { version = "0.4.27", features = ["kv"] }
+simplelog = "0.12.2"
+flutter_logger = "0.6.1"
+oslog = "0.2.0"
+
+dashmap = "6.1.0"
+tokio-stream = "0.1.17"
+
+image = "0.25.6"
+
+flutter_rust_bridge = { version = "=2.10.0", features = [
+    "anyhow",
+    "dart-opaque",
+    # "log",
+    "portable-atomic",
+    "rust-async",
+    "thread-pool",
+    "user-utils",
+    "wasm-start",
+    "uuid", "chrono"
+], default-features = false }
+
+ambassador = "0.4.1"
+enum_dispatch = "0.3.13"
+trait-variant = "0.1.2"
+
+tower-sessions = "0.14.0"
+
+axum = { version = "0.8.4", features = ["ws"] }
+axum-login = "0.17.0"
+
+tokio-tungstenite = "*"
+
+ezsockets = "0.7.0"
+
+# Files
+notify = "8.0.0"
+walkdir = "2.5.0"
+
+# Member crates
+cortdex_types = { path  = "./types" }
+cortdex_ml = { path  = "./ml" }
+cortdex_db = { path  = "./db" }
+cortdex_editor = { path  = "./editor" }
+
+into_request = { path  = "./into_request/into_request", features = ["derive"] }
+
+[workspace.dependencies.reqwest]
+version = "0.12.18"
+default-features = false
+features = [
+    "charset",
+    "http2",
+    # "http3",
+    "rustls-tls-webpki-roots",
+    "rustls-tls",
+    "stream",
+    "multipart",
+    "socks",
+    "json",
+    "cookies",
+
+    # Compression
+    "brotli",
+    "gzip",
+]
+
+[package]
+name = "rust_lib_cortdex"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "staticlib", "lib"]
+
+[[bin]]
+name = "server"
+
+[package.metadata.cargo-xcode]
+frameworks = ["SystemConfiguration"]
+
+[patch.crates-io]
+system-configuration = { git = "https://github.com/mullvad/system-configuration-rs", version = "0.6.1" }
+axum-login = { git = "https://github.com/maxcountryman/axum-login.git" }
+
+
+[dependencies]
+flutter_rust_bridge = { version = "=2.10.0", features = ["anyhow", "dart-opaque", "portable-atomic", "rust-async", "thread-pool", "user-utils", "wasm-start", "uuid", "chrono"], default-features = false }
+
+cortdex_ml.workspace = true
+cortdex_db.workspace = true
+cortdex_types.workspace = true
+cortdex_editor.workspace = true
+into_request.workspace = true
+
+ambassador.workspace = true
+trait-variant.workspace = true
+enum_dispatch.workspace = true
+
+crossbeam.workspace = true
+futures.workspace = true
+tokio.workspace = true
+dashmap.workspace = true
+async-trait.workspace = true
+
+serde.workspace = true
+serde_json.workspace = true
+typetag.workspace = true
+
+anyhow.workspace = true
+thiserror.workspace = true
+
+quill-delta-rs.workspace = true
+
+uuid.workspace = true
+tokio-stream.workspace = true
+log.workspace = true
+simplelog.workspace = true
+flutter_logger.workspace = true
+
+reqwest.workspace = true
+
+tower-sessions.workspace = true
+axum-login.workspace = true
+
+
+chrono.workspace = true
+
+tokio-tungstenite.workspace = true
+axum.workspace = true
+
+ezsockets.workspace = true
+
+
+deadpool.workspace = true
+surrealdb.workspace = true
+
+notify.workspace = true
+env_logger = "0.11.8"
+
+
+[target.'cfg(target_os = "android")'.dependencies]
+android_logger.workspace = true
+openssl = { version = "*", features = ["vendored"] }
+
+[target.i686-linux-android.dependencies]
+aws-lc-rs = { version = "1.13.1", features = ["bindgen"] }
+openssl = { version = "*", features = ["vendored"] }
+
+[target.'cfg(target_os = "ios")'.dependencies]
+oslog.workspace = true

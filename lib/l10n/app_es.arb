@@ -1,0 +1,155 @@
+{
+  "helloWorld": "¡Hola Mundo!",
+  "@helloWorld": {
+    "description": "El saludo convencional del programador recién nacido"
+  },
+  "welcomeMessage": "¡Bienvenido a la aplicación Cortdex!",
+  "chooseDatabaseType": "Elegir Tipo de Base de Datos",
+  "local": "Local",
+  "local_": "Local {value}",
+  "remote": "Remoto",
+  "remote_": "Remoto {value}",
+  "connection": "Conexión",
+  "chooseConnectionType": "Elegir Tipo de Conexión",
+  "saveDbSettings": "Guardar configuración de la base de datos",
+  "settings": "Configuración",
+  "settings_": "Configuración de {value}",
+  "loading": "Cargando",
+  "failed": "Fallido",
+  "loadingFailed": "Carga fallida",
+  "client": "Cliente",
+  "server": "Servidor",
+  "choose": "Elegir",
+  "address": "Dirección",
+  "address_": "Dirección de {value}",
+  "port": "Puerto",
+  "model": "Modelo",
+  "path": "Ruta",
+  "path_": "Ruta de {value}",
+  "enter": "Ingresar",
+  "enter_": "Ingresar {value}",
+  "database": "Base de Datos",
+  "selectionHint": "Elige el {value}",
+  "@selectionHint": {
+    "description": "Una pista para las opciones de selección",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "connect": "Conectar",
+  "connectTo": "Conectar a {value}",
+  "@connectTo": {
+    "description": "Conectar a un recurso o servicio específico",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "disconnect": "Desconectar",
+  "disconnectFrom": "Desconectar de {value}",
+  "@disconnectFrom": {
+    "description": "Desconectar de un recurso o servicio específico",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "start": "Iniciar",
+  "startThe": "Iniciar {value}",
+  "@startThe": {
+    "description": "Iniciar un proceso con {value}",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "stop": "Detener",
+  "stop_": "Detener {value}",
+  "create_": "Crear {value}",
+  "@create_": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "inputHint": "Ingresa el {value}",
+  "@inputHint": {
+    "description": "Una pista para los campos de entrada",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "addNew": "Añadir nuevo",
+  "@addNew": {
+    "description": ""
+  },
+  "add": "Añadir",
+  "@add": {
+    "description": ""
+  },
+  "create": "Crear",
+  "@create": {
+    "description": ""
+  },
+  "delete": "Eliminar",
+  "@delete": {
+    "description": ""
+  },
+  "edit": "Editar",
+  "@edit": {
+    "description": ""
+  },
+  "use": "Usar",
+  "@use": {
+    "description": ""
+  },
+  "error": "Error{value}",
+  "@error": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "notFound": "No se encontró {value}",
+  "@notFound": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "El valor que se insertará en el marcador de posición"
+      }
+    }
+  },
+  "share": "Compartir",
+  "@share": {
+    "description": ""
+  },
+  "menu": "Menú",
+  "@menu": {
+    "description": ""
+  },
+  "noteEditorHint": "Comienza a escribir tus notas...",
+  "@noteEditorHint": {
+    "description": ""
+  },
+  "attribute": "Atributo",
+  "note": "nota"
+}

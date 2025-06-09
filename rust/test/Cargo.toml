@@ -1,0 +1,28 @@
+[package]
+name = "cortdex_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+notify.workspace = true
+walkdir.workspace = true
+
+
+
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+cortdex_types.workspace = true
+
+cortdex_ml.workspace = true
+cortdex_db.workspace = true
+serde_yaml.workspace = true
+
+tokio.workspace = true
+
+cortdex_editor.workspace = true
+
+log.workspace = true
+
+# git2.workspace = true

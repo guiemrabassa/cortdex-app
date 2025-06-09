@@ -1,0 +1,43 @@
+[package]
+name = "cortdex_ml"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+candle-core.workspace = true
+candle-nn.workspace = true
+candle-transformers.workspace = true
+candle-examples.workspace = true
+
+candle-hf-hub.workspace = true
+
+tokenizers.workspace = true
+
+anyhow.workspace = true
+
+serde.workspace = true
+serde_json.workspace = true
+
+image.workspace = true 
+
+thiserror.workspace = true
+
+cortdex_types.workspace = true
+
+
+walkdir.workspace = true
+
+futures.workspace = true
+
+flutter_rust_bridge.workspace = true
+
+
+atomic-take = "1.1.0"
+
+
+dashmap.workspace = true
+
+log.workspace = true
+
+
+reqwest.workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "into_request"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+bitcode.workspace = true
+
+reqwest.workspace = true
+
+into_request_derive = { path = "../into_request_derive" }
+
+[features]
+derive = []

@@ -1,0 +1,187 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "welcomeMessage": "Welcome to the Cortdex application!",
+  "chooseDatabaseType": "Choose Database Type",
+  "local": "Local",
+  "local_": "Local {value}",
+  "remote": "Remote",
+  "remote_": "Remote {value}",
+  "connection": "Connection",
+  "chooseConnectionType": "Choose Connection Type",
+
+  "saveDbSettings": "Save database settings",
+
+  "settings": "Settings",
+
+  "settings_": "{value} settings",
+
+  "loading": "Loading",
+  "failed": "Failed",
+  "loadingFailed": "Loading failed",
+
+  "client": "Client",
+  "server": "Server",
+
+  "choose": "Choose",
+
+  "address": "Address",
+  "address_": "{value} Address",
+
+  "port": "Port",
+
+  "model": "Model",
+  "path": "Path",
+  "path_": "{value} path",
+
+  "enter": "Enter",
+
+  "enter_": "Enter {value}",
+
+  "database": "Database",
+
+  "selectionHint": "Choose the {value}",
+  "@selectionHint": {
+    "description": "A hint for selection options",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "connect": "Connect",
+  "connectTo": "Connect to {value}",
+  "@connectTo": {
+    "description": "Connect to a specific resource or service",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "disconnect": "Disconnect",
+  "disconnectFrom": "Disconnect from {value}",
+  "@disconnectFrom": {
+    "description": "Connect to a specific resource or service",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "start": "Start",
+  "startThe": "Start {value}",
+  "@startThe": {
+    "description": "Start a process with {value}",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "stop": "Stop",
+  "stop_": "Stop {value}",
+
+  "create_": "Create {value}",
+  "@create_": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "inputHint": "Enter the {value}",
+  "@inputHint": {
+    "description": "A hint for input fields",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "addNew": "Add new",
+  "@addNew": {
+    "description": ""
+  },
+
+  "add": "Add",
+  "@add": {
+    "description": ""
+  },
+
+  "create": "Create",
+  "@create": {
+    "description": ""
+  },
+
+  "delete": "Delete",
+  "@delete": {
+    "description": ""
+  },
+
+  "edit": "Edit",
+  "@edit": {
+    "description": ""
+  },
+
+  "use": "Use",
+  "@use": {
+    "description": ""
+  },
+
+  "error": "Error{value}",
+  "@error": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "notFound": "No {value} found",
+  "@notFound": {
+    "description": "",
+    "placeholders": {
+      "value": {
+        "type": "String",
+        "description": "The value to be inserted into the placeholder"
+      }
+    }
+  },
+
+  "share": "Share",
+  "@share": {
+    "description": ""
+  },
+
+  "menu": "Menu",
+  "@menu": {
+    "description": ""
+  },
+
+  "noteEditorHint": "Start writing your notes...",
+  "@noteEditorHint": {
+    "description": ""
+  },
+
+
+  "attribute": "Attribute",
+  "note": "note"
+}

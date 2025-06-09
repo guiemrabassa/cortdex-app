@@ -1,0 +1,27 @@
+[target.'cfg(any(target_arch = "arm", target_arch = "aarch64"))']
+rustflags = ["-C", "target-feature=+fp16"]
+
+# [target.aarch64-linux-android]
+# linker = "aarch64-linux-android29-clang"
+
+# [target.i686-linux-android]
+# linker = "i686-linux-android21-clang"
+# ar = "llvm-ar"
+
+
+[target.aarch64-linux-android]
+linker = "aarch64-linux-android21-clang"
+
+[target.armv7-linux-androideabi]
+linker = "armv7a-linux-androideabi21-clang"
+
+[target.x86_64-linux-android]
+linker = "x86_64-linux-android21-clang"
+
+[target.i686-linux-android]
+linker = "i686-linux-android21-clang"
+
+
+[env]
+CFLAGS = "-fPIC"
+CPPFLAGS = "-DANDROID -fPIC"

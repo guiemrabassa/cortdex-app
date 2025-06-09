@@ -1,0 +1,33 @@
+[package]
+name = "cortdex_types"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ambassador.workspace = true
+
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+
+uuid.workspace = true
+
+anyhow.workspace = true
+
+reqwest.workspace = true
+
+chrono.workspace = true
+
+into_request.workspace = true
+
+
+bitcode.workspace = true
+
+flutter_rust_bridge.workspace = true
+
+
+surrealdb = { workspace = true }
+
+quill-delta-rs.workspace = true
+
+log.workspace = true

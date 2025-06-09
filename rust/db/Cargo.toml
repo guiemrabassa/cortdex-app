@@ -1,0 +1,40 @@
+[package]
+name = "cortdex_db"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+
+surrealdb = { workspace = true }
+
+# tokio = { workspace = true }
+anyhow = { workspace = true }
+
+crossbeam.workspace = true
+tokio.workspace = true
+
+futures.workspace = true
+
+chrono.workspace = true
+
+
+uuid.workspace = true
+
+quill-delta-rs.workspace = true
+
+log.workspace = true
+flutter_rust_bridge.workspace = true
+
+deadpool.workspace = true
+
+
+cortdex_types.workspace = true
+
+# git2.workspace = true
+
+gix.workspace = true
+
+thiserror.workspace = true
