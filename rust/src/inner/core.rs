@@ -1,25 +1,16 @@
 use std::{ops::Deref, sync::Arc};
 
-use axum::extract::ws::{Message, WebSocket};
 use cortdex_db::{api::DbPath, connection::DbConnection};
 use cortdex_ml::{
     api::manager::ModelManagerConfig,
     manager::ModelManager,
 };
-use cortdex_types::api::note::NoteEditingCommand;
-use dashmap::DashMap;
-use futures::stream::{SplitSink, SplitStream};
 
 use log::debug;
-use tokio_stream::StreamExt;
-use uuid::Uuid;
 
 use crate::api::error::CortdexError;
 
-use super::{
-    command::{ConcreteInnerCortdexCommand, CortdexCommand},
-    stream::CortdexWriterExt,
-};
+use super::command::{ConcreteInnerCortdexCommand, CortdexCommand};
 
 pub struct CortdexCore {
     pub db_pool: DbConnection,

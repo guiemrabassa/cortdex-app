@@ -1,17 +1,15 @@
 use std::net::{Ipv4Addr, SocketAddr};
-use std::time::Instant;
 
 use anyhow::Context;
 use auth::{Backend, auth_layer, login_post};
 use axum::extract::State;
 use axum::response::IntoResponse;
-use axum::routing::{any, get, post};
+use axum::routing::{any, post};
 use axum::{Json, Router};
 use axum_login::login_required;
 use flutter_rust_bridge::frb;
 use log::debug;
 
-use cortdex_db::api::DbPath;
 
 use reqwest::StatusCode;
 use serde::{Deserialize, Serialize};

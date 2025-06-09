@@ -1,6 +1,5 @@
 
 
-use cortdex_db::api::git::VaultManager;
 use cortdex_ml::{api::manager::ModelManagerConfig, manager::ModelManager};
 
 use notify::Watcher;

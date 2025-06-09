@@ -4,7 +4,7 @@ use rust_lib_cortdex::{
     inner::server::{CortdexServer},
 };
 
-use log::{info, log};
+use log::info;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {

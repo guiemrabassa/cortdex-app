@@ -1,4 +1,3 @@
-use chrono::NaiveDateTime;
 
 use log::debug;
 use log::info;
@@ -7,7 +6,6 @@ use serde::Serialize;
 
 use surrealdb::engine::any::Any;
 use surrealdb::opt::auth::Root;
-use surrealdb::sql::Thing;
 use surrealdb::Surreal;
 
 use crate::api::DbPath;
