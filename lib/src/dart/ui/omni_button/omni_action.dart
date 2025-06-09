@@ -1,6 +1,5 @@
 import 'dart:math' as math;
 
-import 'package:cortdex/src/dart/client.dart';
 import 'package:cortdex/src/dart/ui/cortdex_widget.dart';
 import 'package:cortdex/src/rust/api.dart';
 import 'package:flutter/material.dart';

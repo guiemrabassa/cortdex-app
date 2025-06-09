@@ -2,8 +2,6 @@ import 'package:cortdex/src/dart/ui/components/list.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_quill/flutter_quill.dart';
-import 'package:flutter_quill_extensions/flutter_quill_extensions.dart';
 
 /// Custom toolbar that uses the buttons of [`flutter_quill`](https://pub.dev/packages/flutter_quill).
 ///

@@ -10,7 +10,6 @@ import 'package:cortdex/src/dart/ui/home.dart';
 import 'package:cortdex/src/dart/ui/editor/note_editor.dart';
 
 import 'package:cortdex/src/dart/ui/omni_button/omni_button.dart';
-import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:uuid/uuid_value.dart';
 
 part 'routes.g.dart';

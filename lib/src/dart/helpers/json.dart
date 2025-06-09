@@ -13,11 +13,11 @@ class CortdexJson {
 
   static List<R> _fromJsonList<R extends Object?>(List<dynamic> json) {
     var list = List<R>.empty(growable: true);
-    json.forEach((element) {
+    for (var element in json) {
 
       var eleme = fromJson<R>(jsonEncode(element));
       if (eleme != null) list.add(eleme);
-    });
+    }
 
     return list;
   }
@@ -110,4 +110,6 @@ class CortdexJson {
   }
 }
 
-T? fromJson<T extends Object>() {}
+T? fromJson<T extends Object>() {
+  return null;
+}

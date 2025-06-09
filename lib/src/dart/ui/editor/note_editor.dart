@@ -5,14 +5,11 @@ import 'package:cortdex/src/dart/settings/note.dart';
 import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/dart/ui/editor/save_button.dart';
 import 'package:cortdex/src/dart/ui/editor/toolbar.dart';
-import 'package:cortdex/src/dart/ui/note/utils.dart';
 import 'package:cortdex/src/rust/api.dart';
 import 'package:cortdex/src/rust/third_party/cortdex_types/api/note.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_quill/flutter_quill.dart';
-import 'package:flutter_quill_extensions/flutter_quill_extensions.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:cortdex/src/dart/ui/editor/custom_blocks.dart';
 import 'package:cortdex/src/dart/ui/note/note_menu.dart';
@@ -22,7 +19,6 @@ import 'package:cortdex/src/dart/ui/cortdex_widget.dart';
 
 import 'package:markdown_quill/markdown_quill.dart';
 
-import 'package:share_plus/share_plus.dart';
 import 'package:uuid/uuid.dart';
 import 'package:window_manager/window_manager.dart';
 

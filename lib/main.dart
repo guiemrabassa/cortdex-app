@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:camera/camera.dart';
 import 'package:cortdex/l10n/generated/app_localizations.dart';
-import 'package:cortdex/src/dart/client.dart';
 import 'package:cortdex/src/dart/helpers/debug.dart';
 import 'package:cortdex/src/dart/helpers/platform.dart';
 import 'package:cortdex/src/dart/notifications/notifications.dart';

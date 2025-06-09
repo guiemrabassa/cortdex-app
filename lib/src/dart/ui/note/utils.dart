@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/rust/third_party/cortdex_types/api/note.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart';

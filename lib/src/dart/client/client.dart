@@ -1,13 +1,8 @@
-import 'package:cortdex/src/dart/client.dart';
 import 'package:cortdex/src/dart/helpers/debug.dart';
 import 'package:cortdex/src/dart/settings/model.dart';
 import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/rust/api.dart';
 import 'package:cortdex/src/rust/frb_generated.dart';
-import 'package:cortdex/src/rust/inner/client.dart';
-import 'package:cortdex/src/rust/third_party/cortdex_db/api.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/experimental/mutation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

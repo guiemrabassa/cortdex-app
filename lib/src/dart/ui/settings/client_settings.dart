@@ -1,11 +1,9 @@
-import 'package:cortdex/src/dart/client.dart' show Client;
 import 'package:cortdex/src/dart/client/client.dart' show clientProvider;
 import 'package:cortdex/src/dart/helpers/context.dart';
 import 'package:cortdex/src/dart/helpers/debug.dart';
 import 'package:cortdex/src/dart/server/server.dart';
 import 'package:cortdex/src/dart/settings/client.dart';
 import 'package:cortdex/src/dart/ui/components/text.dart';
-import 'package:cortdex/src/dart/ui/cortdex_widget.dart';
 import 'package:cortdex/src/dart/ui/settings/model.dart';
 import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/dart/ui/field.dart';

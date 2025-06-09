@@ -6,12 +6,10 @@ import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/dart/ui/components/list.dart';
 import 'package:cortdex/src/dart/ui/cortdex_widget.dart';
 import 'package:cortdex/src/dart/ui/note/note_tile.dart';
-import 'package:cortdex/src/dart/ui/note/utils.dart';
 import 'package:cortdex/src/rust/api.dart';
 import 'package:cortdex/src/rust/third_party/cortdex_types/api/note.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_riverpod/src/core.dart';
 import 'package:uuid/uuid.dart';
 

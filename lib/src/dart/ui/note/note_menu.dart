@@ -2,7 +2,6 @@ import 'package:cortdex/src/dart/ui/components/text.dart';
 import 'package:cortdex/src/dart/ui/cortdex_widget.dart';
 import 'package:cortdex/src/rust/api.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:cortdex/src/dart/ui/attributes/attribute_list.dart';
 import 'package:uuid/uuid_value.dart';

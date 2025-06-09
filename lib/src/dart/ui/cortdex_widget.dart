@@ -7,7 +7,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:cortdex/src/dart/helpers/async_snapshot.dart';
 
-import '../client.dart';
 
 abstract class AsyncValueWidget<T> extends HookConsumerWidget {
   const AsyncValueWidget({super.key});

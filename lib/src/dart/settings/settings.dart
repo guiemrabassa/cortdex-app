@@ -2,16 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:cortdex/src/dart/client.dart';
-import 'package:cortdex/src/dart/helpers/context.dart';
 import 'package:cortdex/src/dart/helpers/debug.dart';
 import 'package:cortdex/src/dart/helpers/files.dart';
 import 'package:cortdex/src/dart/helpers/json.dart';
 import 'package:cortdex/src/dart/server/server.dart';
 import 'package:cortdex/src/rust/api.dart';
 import 'package:cortdex/src/rust/third_party/cortdex_db/api.dart';
-import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:cortdex/src/dart/routes/routes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:path/path.dart' as p;
@@ -29,7 +25,7 @@ typedef EventCallback = void Function(SettingEventType);
 class Settings {
   SharedPreferences _prefs;
   late String mainDir;
-  Map<SettingsKey, Map<String, EventCallback>> _listeners = {};
+  final Map<SettingsKey, Map<String, EventCallback>> _listeners = {};
 
   void _callListeners(SettingEventType type, SettingsKey key) {
     Log.d('Calling listeners for $type on $key');

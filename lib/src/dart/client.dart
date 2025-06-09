@@ -1,16 +1,11 @@
-import 'dart:convert';
 import 'package:cortdex/src/dart/helpers/debug.dart';
 import 'package:cortdex/src/dart/helpers/json.dart';
 import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/rust/api.dart';
-import 'package:cortdex/src/rust/frb_generated.dart';
 import 'package:cortdex/src/rust/inner/command.dart';
-import 'package:cortdex/src/rust/inner/server.dart';
-import 'package:cortdex/src/rust/third_party/cortdex_db/api.dart';
 import 'package:cortdex/src/rust/third_party/cortdex_types/api/attribute.dart';
 import 'package:cortdex/src/rust/third_party/cortdex_types/api/note.dart';
 
-import 'package:flutter/material.dart';
 
 enum ClientKey implements SettingsKey {
   connection,
