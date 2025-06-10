@@ -20,12 +20,3 @@ targets:
       riverpod_generator:
         generate_for:
           - lib/src/**
-      super_annotations:
-        generate_for:
-          - lib/src/**
-
-
-global_options:
-  super_annotations:
-    options:
-      targets: [ meta ]
