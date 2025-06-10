@@ -1,3 +1,4 @@
+import 'package:cortdex/src/dart/helpers/context.dart';
 import 'package:cortdex/src/dart/settings/note.dart';
 import 'package:cortdex/src/dart/ui/components/text.dart';
 import 'package:cortdex/src/dart/ui/components/toggleable.dart';
@@ -23,10 +24,10 @@ class NoteSettingsPage extends HookConsumerWidget {
       Settings().getOrInsert(NoteKey.saveOnClose, true),
     );
 
-    return SettingsPage('Notes', [
+    return SettingsPage(context.lang.notes, [
       Row(
         children: [
-          GoodText('Auto save', type: TextType.button),
+          GoodText(context.lang.autoSave, type: TextType.button),
           Checkbox(
             value: autoSave.value,
             onChanged: (value) async {
@@ -37,7 +38,7 @@ class NoteSettingsPage extends HookConsumerWidget {
           Toggleable(
             Row(
               children: [
-                GoodText('Interval:', type: TextType.button),
+                GoodText('${context.lang.interval}:', type: TextType.button),
                 NumberPicker(
                   value: saveInterval.value,
                   minValue: 1,
@@ -47,7 +48,7 @@ class NoteSettingsPage extends HookConsumerWidget {
                     await Settings().save(NoteKey.saveInterval, value);
                   },
                 ),
-                GoodText('seconds', type: TextType.button),
+                GoodText(context.lang.seconds, type: TextType.button),
               ],
             ),
             enabled: autoSave.value,
@@ -56,7 +57,7 @@ class NoteSettingsPage extends HookConsumerWidget {
       ),
       Row(
         children: [
-          GoodText('Save on close', type: TextType.button),
+          GoodText(context.lang.saveOnClose, type: TextType.button),
           Checkbox(
             value: saveOnClose.value,
             onChanged: (value) async {
@@ -69,37 +70,3 @@ class NoteSettingsPage extends HookConsumerWidget {
     ]);
   }
 }
-
-
-/* class Setting<T> extends HookConsumerWidget {
-
-  final String name;
-  final T Function() getValue;
-  final void Function(T?) onChange;
-  final SettingsKey key;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final saveInterval = useState(
-      Settings().getOrInsert(NoteKey.saveInterval, 1),
-    );
-    final saveOnClose = useState(
-      Settings().getOrInsert(NoteKey.saveOnClose, true),
-    );
-
-    return Row(
-        children: [
-          GoodText(name, type: TextType.button),
-          NumberPicker(
-            value: saveInterval.value,
-            minValue: 1,
-            maxValue: 60,
-            onChanged: (value) async {
-              saveInterval.value = value;
-              await Settings().save(key, onChange);
-            },
-          ),
-        ],
-      );
-  }
-} */

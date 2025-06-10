@@ -49,11 +49,10 @@ class ClientSettingsPage extends HookConsumerWidget {
             final start = ref.watch(clientProvider.start);
 
             Log.d('Trying to start with $settings!');
-
+            
             await start(settings);
 
             Log.d('Started!');
-            // await Client().startClientWith(settings);
           },
         ),
       ],
@@ -71,7 +70,7 @@ class ClientSettingsPage extends HookConsumerWidget {
         LabelWithField(
           label: 'IP:',
           value: settings.host,
-          hint: context.lang.inputHint('IP Address'),
+          hint: context.lang.inputHint(context.lang.address_('IP')),
           onChanged: (value) => settings = settings.copyWith(host: value),
         ),
         SizedBox(height: 16),
@@ -305,7 +304,7 @@ class ClientSettingsPage extends HookConsumerWidget {
           _buildRemote(context, remote, ref),
           Row(
             children: [
-              Text('Use local server'),
+              Text(context.lang.local_(context.lang.server)),
               Checkbox(
                 value: useLocalServer.value,
                 onChanged: (value) => useLocalServer.value = value ?? false,

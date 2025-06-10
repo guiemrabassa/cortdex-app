@@ -195,5 +195,10 @@
 
   "share": "Share",
 
-  "menu": "Menu"
+  "menu": "Menu",
+
+  "interval": "Interval",
+  "seconds": "Seconds",
+  "autoSave": "Auto save",
+  "saveOnClose": "Save on close"
 }

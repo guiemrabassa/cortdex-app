@@ -156,5 +156,9 @@
   "notes": "Notizen",
   "eraseAllSettings": "Alle Einstellungen löschen",
   "pin": "Anheften",
-  "unpin": "Lösen"
+  "unpin": "Lösen",
+  "interval": "Intervall",
+  "seconds": "Sekunden",
+  "autoSave": "Automatisches Speichern",
+  "saveOnClose": "Beim Schließen speichern"
 }

@@ -435,6 +435,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Unpin'**
   String get unpin;
+
+  /// No description provided for @interval.
+  ///
+  /// In en, this message translates to:
+  /// **'Interval'**
+  String get interval;
+
+  /// No description provided for @seconds.
+  ///
+  /// In en, this message translates to:
+  /// **'Seconds'**
+  String get seconds;
+
+  /// No description provided for @autoSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto save'**
+  String get autoSave;
+
+  /// No description provided for @saveOnClose.
+  ///
+  /// In en, this message translates to:
+  /// **'Save on close'**
+  String get saveOnClose;
 }
 
 class _AppLocalizationsDelegate

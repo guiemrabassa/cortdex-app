@@ -205,4 +205,16 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get unpin => 'Desanclar';
+
+  @override
+  String get interval => 'Intervalo';
+
+  @override
+  String get seconds => 'Segundos';
+
+  @override
+  String get autoSave => 'Guardado automático';
+
+  @override
+  String get saveOnClose => 'Guardar al cerrar';
 }

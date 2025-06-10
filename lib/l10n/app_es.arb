@@ -156,5 +156,9 @@
   "notes": "Notas",
   "eraseAllSettings": "Borrar todos los ajustes",
   "pin": "Anclar",
-  "unpin": "Desanclar"
+  "unpin": "Desanclar",
+  "interval": "Intervalo",
+  "seconds": "Segundos",
+  "autoSave": "Guardado automático",
+  "saveOnClose": "Guardar al cerrar"
 }
