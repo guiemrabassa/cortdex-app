@@ -87,7 +87,7 @@ class AttributeList extends HookConsumerWidget {
             return SizedBox(
               height: MediaQuery.sizeOf(
                 context,
-              ).height, // Set your desired height
+              ).height,
               child: Column(
                 children: [
                   Container(
@@ -203,7 +203,7 @@ class AttributeTile extends CortdexWidget {
             backgroundColor: Color(0xFFFE4A49),
             foregroundColor: Colors.white,
             icon: Icons.delete,
-            label: 'Delete',
+            label: context.lang.delete,
           ),
         ],
       ),
@@ -214,7 +214,6 @@ class AttributeTile extends CortdexWidget {
           children: [
             GoodText(noteAttribute.name, type: TextType.button),
             VerticalDivider(),
-            // Expanded(child: AttributeValueWidget.from(noteAttribute)),
             AttributeValueWidget.from(noteAttribute),
           ],
         ),
@@ -243,7 +242,7 @@ class CreateAttributeDialog extends CortdexWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text('Create new attribute.'),
+          Text(context.lang.create_(context.lang.attribute)),
           const SizedBox(height: 15),
           Row(
             children: [
@@ -273,15 +272,15 @@ class CreateAttributeDialog extends CortdexWidget {
             ],
           ),
           TextButton(
-            onPressed: () {
+            onPressed: () async {
               var def = Attribute(
                 kind: searchedAttributeKind.value,
                 name: controller.text,
               );
-              client.run(AttributeCommand.create(def: def));
+              await client.run(AttributeCommand.create(def: def));
               Navigator.pop(context, def);
             },
-            child: const Text('Create'),
+            child: Text(context.lang.create),
           ),
         ],
       ),
