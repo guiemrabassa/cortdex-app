@@ -151,5 +151,10 @@
     "description": ""
   },
   "attribute": "Atributo",
-  "note": "nota"
+  "attributes": "Atributos",
+  "note": "nota",
+  "notes": "Notas",
+  "eraseAllSettings": "Borrar todos los ajustes",
+  "pin": "Anclar",
+  "unpin": "Desanclar"
 }

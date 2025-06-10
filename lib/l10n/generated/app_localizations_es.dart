@@ -60,6 +60,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get loadingFailed => 'Carga fallida';
 
   @override
+  String get eraseAllSettings => 'Erase all settings';
+
+  @override
   String get client => 'Cliente';
 
   @override
@@ -189,5 +192,17 @@ class AppLocalizationsEs extends AppLocalizations {
   String get attribute => 'Atributo';
 
   @override
+  String get attributes => 'Attributes';
+
+  @override
   String get note => 'nota';
+
+  @override
+  String get notes => 'notes';
+
+  @override
+  String get pin => 'Pin';
+
+  @override
+  String get unpin => 'Unpin';
 }

@@ -151,5 +151,10 @@
     "description": ""
   },
   "attribute": "Attribut",
-  "note": "Notiz"
+  "attributes": "Attribute",
+  "note": "Notiz",
+  "notes": "Notizen",
+  "eraseAllSettings": "Alle Einstellungen löschen",
+  "pin": "Anheften",
+  "unpin": "Lösen"
 }

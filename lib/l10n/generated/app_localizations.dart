@@ -190,6 +190,12 @@ abstract class AppLocalizations {
   /// **'Loading failed'**
   String get loadingFailed;
 
+  /// No description provided for @eraseAllSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Erase all settings'**
+  String get eraseAllSettings;
+
   /// No description provided for @client.
   ///
   /// In en, this message translates to:
@@ -400,11 +406,35 @@ abstract class AppLocalizations {
   /// **'Attribute'**
   String get attribute;
 
+  /// No description provided for @attributes.
+  ///
+  /// In en, this message translates to:
+  /// **'Attributes'**
+  String get attributes;
+
   /// No description provided for @note.
   ///
   /// In en, this message translates to:
   /// **'note'**
   String get note;
+
+  /// No description provided for @notes.
+  ///
+  /// In en, this message translates to:
+  /// **'notes'**
+  String get notes;
+
+  /// No description provided for @pin.
+  ///
+  /// In en, this message translates to:
+  /// **'Pin'**
+  String get pin;
+
+  /// No description provided for @unpin.
+  ///
+  /// In en, this message translates to:
+  /// **'Unpin'**
+  String get unpin;
 }
 
 class _AppLocalizationsDelegate
