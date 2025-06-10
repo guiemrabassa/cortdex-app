@@ -6238,6 +6238,7 @@ dependencies = [
  "anyhow",
  "async-trait",
  "aws-lc-rs",
+ "aws-lc-sys",
  "axum",
  "axum-login",
  "chrono",

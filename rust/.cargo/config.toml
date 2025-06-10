@@ -23,5 +23,8 @@ linker = "i686-linux-android21-clang"
 
 
 [env]
-CFLAGS = "-fPIC"
-CPPFLAGS = "-DANDROID -fPIC"
+# CFLAGS = "-I /experimental:c11atomics /std:c11"
+# CFLAGS = "-fPIC /experimental:c11atomics /std:c11"
+# CPPFLAGS = "-DANDROID -fPIC"
+
+# CL = "/experimental:c11atomics /std:c11"
