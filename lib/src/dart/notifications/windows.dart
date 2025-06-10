@@ -11,6 +11,13 @@ class WindowsNotifications extends NotificationPlatform {
   @override
   InitializationSettings initialization() {
     // TODO
+
+    /* return InitializationSettings(windows: WindowsInitializationSettings(
+      appName: appName,
+      appUserModelId: appUserModelId,
+      guid: guid
+    )); */
+
     return appleCommonInitialization();
   }
 

@@ -13,14 +13,14 @@ import 'package:timezone/timezone.dart' as tz;
 
 final NotificationPlatform notificationPlatform =
     switch (Platform.operatingSystem) {
-  "android" => AndroidNotifications(),
-  "ios" => IOSNotifications(),
-  "linux" => LinuxNotifications(),
-  "macos" => MacOSNotifications(),
-  "windows" => WindowsNotifications(),
-  // "fuchsia" => AndroidNotifications(),
-  String() => throw UnimplementedError(),
-};
+      "android" => AndroidNotifications(),
+      "ios" => IOSNotifications(),
+      "linux" => LinuxNotifications(),
+      "macos" => MacOSNotifications(),
+      "windows" => WindowsNotifications(),
+      // "fuchsia" => AndroidNotifications(),
+      String() => throw UnimplementedError(),
+    };
 
 abstract class NotificationPlatform {
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
@@ -70,28 +70,38 @@ abstract class NotificationPlatform {
   }
 
   Future<void> showNotification() async {
-    await flutterLocalNotificationsPlugin.show(notificationId++,
-        'plain title $notificationId', 'plain body', notificationDetails,
-        payload: 'item x');
+    await flutterLocalNotificationsPlugin.show(
+      notificationId++,
+      'plain title $notificationId',
+      'plain body',
+      notificationDetails,
+      payload: 'item x',
+    );
   }
 
   Future<void> showNotificationIn() async {
     if (!Platform.isLinux) {
       // Configure scheduling
       await flutterLocalNotificationsPlugin.zonedSchedule(
-          notificationId++,
-          'scheduled title',
-          'scheduled body',
-          tz.TZDateTime.now(tz.local).add(const Duration(seconds: 20)),
-          notificationDetails,
-          androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle);
+        notificationId++,
+        'scheduled title',
+        'scheduled body',
+        tz.TZDateTime.now(tz.local).add(const Duration(seconds: 20)),
+        notificationDetails,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      );
     }
   }
 
   Future<void> showNotificationPeriodically() async {
-    await flutterLocalNotificationsPlugin.periodicallyShow(0, 'repeating title',
-        'repeating body', RepeatInterval.everyMinute, notificationDetails,
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle);
+    await flutterLocalNotificationsPlugin.periodicallyShow(
+      0,
+      'repeating title',
+      'repeating body',
+      RepeatInterval.everyMinute,
+      notificationDetails,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+    );
   }
 
   Future<List<PendingNotificationRequest>> showActive() async {
@@ -106,12 +116,15 @@ abstract class NotificationPlatform {
 @pragma('vm:entry-point')
 void notificationTapBackground(NotificationResponse notificationResponse) {
   // ignore: avoid_print
-  print('notification(${notificationResponse.id}) action tapped: '
-      '${notificationResponse.actionId} with'
-      ' payload: ${notificationResponse.payload}');
+  print(
+    'notification(${notificationResponse.id}) action tapped: '
+    '${notificationResponse.actionId} with'
+    ' payload: ${notificationResponse.payload}',
+  );
   if (notificationResponse.input?.isNotEmpty ?? false) {
     // ignore: avoid_print
     print(
-        'notification action tapped with input: ${notificationResponse.input}');
+      'notification action tapped with input: ${notificationResponse.input}',
+    );
   }
 }

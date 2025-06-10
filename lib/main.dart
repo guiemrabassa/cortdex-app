@@ -85,7 +85,7 @@ Future<void> start(bool isSubWindow) async {
 
   ErrorHandler.init();
 
-  await notificationPlatform.setup();
+  // await notificationPlatform.setup();
 
   await Settings.init();
 
