@@ -195,7 +195,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get attributes => 'Atributos';
 
   @override
-  String get note => 'nota';
+  String get note => 'Nota';
 
   @override
   String get notes => 'Notas';

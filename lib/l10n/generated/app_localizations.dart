@@ -415,13 +415,13 @@ abstract class AppLocalizations {
   /// No description provided for @note.
   ///
   /// In en, this message translates to:
-  /// **'note'**
+  /// **'Note'**
   String get note;
 
   /// No description provided for @notes.
   ///
   /// In en, this message translates to:
-  /// **'notes'**
+  /// **'Notes'**
   String get notes;
 
   /// No description provided for @pin.

@@ -1,5 +1,7 @@
 
 
+import 'package:cortdex/src/dart/helpers/context.dart';
+import 'package:cortdex/src/dart/helpers/files.dart';
 import 'package:cortdex/src/dart/routes/routes.dart';
 import 'package:cortdex/src/dart/settings/settings.dart';
 import 'package:cortdex/src/dart/ui/components/text.dart';
@@ -13,22 +15,22 @@ class SettingsWidget extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: AppBar(title: Text(context.lang.settings)),
       body: ListView(
         children: [
           TextTile(
             textAlign: TextAlign.left,
-            text: 'Connection',
+            text: context.lang.connection,
             onTap: () => ConnectionSettingsRoute().push(context),
           ),
           TextTile(
             textAlign: TextAlign.left,
-            text: 'Notes',
+            text: context.lang.notes,
             onTap: () => NoteSettingsRoute().push(context),
           ),
           TextTile(
             textAlign: TextAlign.left,
-            text: 'ERASE ALL',
+            text: context.lang.eraseAllSettings,
             onTap: () async => await Settings().eraseAll(),
           ),
         ],

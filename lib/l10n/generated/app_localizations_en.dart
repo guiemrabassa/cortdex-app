@@ -195,10 +195,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get attributes => 'Attributes';
 
   @override
-  String get note => 'note';
+  String get note => 'Note';
 
   @override
-  String get notes => 'notes';
+  String get notes => 'Notes';
 
   @override
   String get pin => 'Pin';
