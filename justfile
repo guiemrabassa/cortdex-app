@@ -1,15 +1,9 @@
-build-rust *ARGS:
+build *ARGS:
     @~/.cargo/bin/flutter_rust_bridge_codegen generate {{ARGS}}
 
-build-rust-watch: (build-rust "--watch")
+build-rust-watch: (build "--watch")
 
-build-flutter:
-    @flutter build
-
-build: build-rust build-flutter
-    @echo "Build complete"
-
-run: build-rust
+run: build
     @flutter run
 
 run-no-build:
