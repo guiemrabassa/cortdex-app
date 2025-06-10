@@ -18,25 +18,8 @@ import 'package:cortdex/src/dart/ui/cortdex_widget.dart';
 import 'package:uuid/uuid.dart';
 import 'package:uuid/v7.dart';
 
-/* class AttributeList extends HookConsumerWidget {
-  const AttributeList({super.key, required this.id});
-
-  final UuidValue id;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    
-    // If I use memoized, it won't reload when a note is deleted, 
-    // and it will reloaded on add, but not very well...
-    final result = useMemoized(() => Connection().client?.getAllAttributesFromNote(noteId: id));
-    final noteAtts = useFuture(result);
-
-    
-  }
-} */
-
-class NewAttributeList extends HookConsumerWidget {
-  const NewAttributeList({super.key, required this.id, required this.client});
+class AttributeList extends HookConsumerWidget {
+  const AttributeList({super.key, required this.id, required this.client});
 
   final CortdexClient client;
 
@@ -78,129 +61,6 @@ class NewAttributeList extends HookConsumerWidget {
           ],
         );
       },
-    );
-  }
-
-  Future<Attribute?> showAttributePicker(BuildContext context) async {
-    return await showModalBottomSheet<Attribute>(
-      context: context,
-      builder: (context) {
-        return HookBuilder(
-          builder: (context) {
-            final query = useState('');
-
-            final future = useMemoized(() {
-              return client.run<List<Attribute>>(
-                AttributeCommand.search(
-                  amount: BigInt.from(10),
-                  query: query.value,
-                  desc: true,
-                ),
-              );
-            }, [query.value]);
-
-            final allAttributes = useFuture(future);
-
-            return SizedBox(
-              height: MediaQuery.sizeOf(
-                context,
-              ).height, // Set your desired height
-              child: Column(
-                children: [
-                  Container(
-                    padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0),
-                    child: Column(
-                      children: [
-                        TextField(
-                          onChanged: (value) {
-                            query.value = value;
-                          },
-                        ),
-                        if (query.value.isNotEmpty)
-                          TextTile(
-                            text: context.lang.create_(query.value),
-                            onTap: () async {
-                              var attribute = await showAttributeCreator(
-                                context,
-                                query.value,
-                              );
-
-                              Navigator.pop(context, attribute);
-                            },
-                          ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: allAttributes.data?.length ?? 0,
-                      itemBuilder: (context, index) {
-                        var attribute = allAttributes.data![index];
-                        return ListTile(
-                          titleAlignment: ListTileTitleAlignment.center,
-                          title: Text(
-                            attribute.name,
-                            textAlign: TextAlign.center,
-                          ),
-                          onTap: () {
-                            Navigator.pop(context, attribute);
-                          },
-                        );
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
-    );
-  }
-}
-
-class AttributeList extends AsyncValueWidget<List<AttributeWithValue>> {
-  const AttributeList({super.key, required this.id, required this.client});
-
-  final CortdexClient client;
-
-  final UuidValue id;
-
-  @override
-  Future<List<AttributeWithValue>?> buildValue() async {
-    return await client.run(AttributeCommand.getAllFromNote(noteId: id)) ??
-        List.empty();
-  }
-
-  @override
-  Widget onValue(
-    BuildContext context,
-    WidgetRef ref,
-    List<AttributeWithValue> value,
-  ) {
-    return Column(
-      children: [
-        TextTile(
-          text: '${context.lang.addNew} ${context.lang.attribute}',
-          onTap: () async {
-            var att = await showAttributePicker(context);
-            if (att != null) {
-              client.run(
-                AttributeCommand.addToNote(
-                  noteId: id,
-                  attributeName: att.name,
-                  attributeValue: getValue(att.kind),
-                ),
-              );
-            }
-          },
-        ),
-        DividedList(
-          items: value,
-          builder: (p0, noteAttribute) =>
-              AttributeTile(noteAttribute: noteAttribute),
-        ),
-      ],
     );
   }
 

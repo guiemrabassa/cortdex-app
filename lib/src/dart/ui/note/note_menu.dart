@@ -16,7 +16,7 @@ class NoteMenu extends CortdexWidget {
     return Column(
       children: [
         GoodText('Note Menu', type: TextType.subtitle),
-        Expanded(child: NewAttributeList(id: id, client: client))
+        Expanded(child: AttributeList(id: id, client: client))
       ],
     );
   }
