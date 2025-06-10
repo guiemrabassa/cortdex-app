@@ -56,7 +56,7 @@ final class ClientProvider extends $NotifierProvider<Client, CortdexClient?> {
   }
 }
 
-String _$clientHash() => r'95084af29dbd24a6c50a3df9311bfa96e54e6e00';
+String _$clientHash() => r'56d53f823e0b1800699df1f3a0cf0081ad7b00f5';
 
 abstract class _$Client extends $Notifier<CortdexClient?> {
   CortdexClient? build();
