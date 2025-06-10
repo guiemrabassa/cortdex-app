@@ -271,7 +271,7 @@ class _Select extends AttributeValueWidget {
             return SizedBox(
               height: MediaQuery.sizeOf(
                 context,
-              ).height, // Set your desired height
+              ).height,
               child: Column(
                 children: [
                   Container(

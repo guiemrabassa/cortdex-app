@@ -77,13 +77,11 @@ class NoteEditorWidget extends AsyncValueWidget<Note> with WindowListener {
       var markdown = DeltaToMarkdown().convert(delta);
 
       client.run(
-        NoteCommand.changeContent(id: value.id, newContent: markdown),
-        res: false,
+        NoteCommand.changeContent(id: value.id, newContent: markdown)
       );
 
       client.run(
-        NoteCommand.changeTitle(id: value.id, newTitle: _titleController.text),
-        res: false,
+        NoteCommand.changeTitle(id: value.id, newTitle: _titleController.text)
       );
 
       hasChanged.value = false;

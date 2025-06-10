@@ -156,7 +156,7 @@ extension CommandProcessor on Client {
 
 
 extension CommandProcessor2 on CortdexClient {
-  Future<T?> run<T>(Object command, {bool res = true}) async {
+  Future<T?> run<T>(Object command) async {
     Log.d('Trying to run command: $command');
 
     ConcreteCortdexCommand ccd = switch (command) {
@@ -172,22 +172,8 @@ extension CommandProcessor2 on CortdexClient {
 
     Log.d('Command run result:\n$result');
     
-    if (res && result != null && (result.isNotEmpty)) {
-      // dynamic json = result; // jsonDecode(result);
-
-      // Log.d('Command run json:\n$json');
-
+    if (result != null && (result.isNotEmpty)) {
       return CortdexJson.fromJson(result);
-
-      /* return switch (T) {
-        const (Note) => CortdexJson.fromJson(json),
-        const (List<Note>) => (json as List<dynamic>).map((e) => CortdexJson.fromJson(e)).toList(),
-        const (AttributeWithValue) => CortdexJson.fromJson(json),
-        const (List<AttributeWithValue>) => (json as List<dynamic>).map((e) => CortdexJson.fromJson(e)).toList(),
-        const (Attribute) => CortdexJson.fromJson(json),
-        const (List<Attribute>) => (json as List<dynamic>).map((e) => CortdexJson.fromJson(e)).toList(),
-        Type() => json,
-      }; */
     } else {
       return null;
     }
